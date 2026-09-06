@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Bill Cipher</title>
+  <desc id="descripcion">Triangulo dorado con un ojo central.</desc>
+  <rect width="320" height="320" rx="160" fill="#2a1a12"/>
+  <g opacity="0.45" stroke="#f2c14e" stroke-width="6" stroke-linecap="round">
+    <path d="M160 30 V72"/>
+    <path d="M160 248 V290"/>
+    <path d="M30 160 H72"/>
+    <path d="M248 160 H290"/>
+    <path d="M68 68 L98 98"/>
+    <path d="M222 222 L252 252"/>
+    <path d="M252 68 L222 98"/>
+    <path d="M98 222 L68 252"/>
+  </g>
+  <polygon points="160,58 258,236 62,236" fill="#f2c14e" stroke="#6b4423" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M105 160 C132 125 188 125 215 160 C188 195 132 195 105 160 Z" fill="#fff3ab" stroke="#2a1a12" stroke-width="8"/>
+  <circle cx="160" cy="160" r="22" fill="#2a1a12"/>
+  <circle cx="168" cy="151" r="7" fill="#fff3ab"/>
+  <path d="M112 210 H208" stroke="#2a1a12" stroke-width="8" stroke-linecap="round"/>
+  <path d="M128 88 H192" stroke="#2a1a12" stroke-width="8" stroke-linecap="round"/>
+</svg>

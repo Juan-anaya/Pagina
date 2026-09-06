@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Cabana del misterio</title>
+  <desc id="descripcion">Cabana rustica iluminada en medio de un bosque oscuro.</desc>
+  <defs>
+    <linearGradient id="fondo-cabana" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#203745"/>
+      <stop offset="0.62" stop-color="#24422a"/>
+      <stop offset="1" stop-color="#17100b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#fondo-cabana)"/>
+  <circle cx="230" cy="120" r="54" fill="#f2c14e"/>
+  <g fill="#122719">
+    <path d="M16 650 L105 345 L194 650 Z"/>
+    <path d="M895 660 L1015 300 L1135 660 Z"/>
+    <path d="M1010 670 L1140 360 L1270 670 Z"/>
+    <path d="M55 665 L190 290 L325 665 Z"/>
+  </g>
+  <path d="M0 585 C150 530 300 565 465 530 C665 488 835 550 1200 493 L1200 720 L0 720 Z" fill="#172214"/>
+  <g transform="translate(350 270)">
+    <path d="M40 170 L250 40 L470 170 Z" fill="#5c321c"/>
+    <path d="M80 170 H430 V390 H80 Z" fill="#7a4d2b"/>
+    <path d="M80 170 H430 V214 H80 Z" fill="#4b2b1b"/>
+    <path d="M196 238 H302 V390 H196 Z" fill="#2a1a12"/>
+    <circle cx="282" cy="318" r="7" fill="#f2c14e"/>
+    <rect x="110" y="232" width="64" height="58" fill="#f2c14e"/>
+    <rect x="332" y="232" width="64" height="58" fill="#f2c14e"/>
+    <path d="M110 262 H174 M142 232 V290 M332 262 H396 M364 232 V290" stroke="#2a1a12" stroke-width="8"/>
+    <path d="M28 170 H482" stroke="#2a1a12" stroke-width="18" stroke-linecap="round"/>
+    <path d="M70 390 H450" stroke="#1b120d" stroke-width="22" stroke-linecap="round"/>
+  </g>
+  <path d="M620 202 C662 170 707 190 724 230 C754 226 782 245 790 276 C728 255 680 260 624 294 C623 257 603 231 620 202 Z" fill="#d8d2a9" opacity="0.16"/>
+</svg>

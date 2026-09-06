@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravity Falls - Pueblo de Misterios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado principal de la pagina -->
+    <header class="encabezado-principal">
+        <div class="contenido-encabezado">
+            <p class="etiqueta-encabezado">Diario de criaturas y secretos</p>
+            <h1>Gravity Falls</h1>
+            <p class="subtitulo-encabezado">Un pueblo escondido entre pinos, enigmas y luces que aparecen cuando cae la noche.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Carrusel de imagenes del ambiente -->
+        <section class="seccion-carrusel" aria-label="Imagenes del pueblo de Gravity Falls">
+            <div class="carrusel">
+                <div class="contenedor-diapositivas">
+                    <article class="diapositiva-carrusel visible">
+                        <img src="https://cdn.wallpapersafari.com/95/11/KyUrza.png" data-respaldo="imagenes/bosque-misterioso.svg" alt="Bosque de Gravity Falls con pinos y montanas" class="imagen-carrusel">
+                        <div class="texto-diapositiva">
+                            <h2>Bosque de secretos</h2>
+                            <p>Los arboles parecen moverse cuando nadie los mira.</p>
+                        </div>
+                    </article>
+
+                    <article class="diapositiva-carrusel">
+                        <img src="https://wallpapercat.com/w/full/5/e/7/127237-3840x2160-desktop-4k-gravity-falls-wallpaper-image.jpg" data-respaldo="imagenes/cabana-del-misterio.svg" alt="Cabana del Misterio de Gravity Falls" class="imagen-carrusel">
+                        <div class="texto-diapositiva">
+                            <h2>La cabana del misterio</h2>
+                            <p>Recuerdos extranos, objetos imposibles y visitantes curiosos.</p>
+                        </div>
+                    </article>
+
+                    <article class="diapositiva-carrusel">
+                        <img src="https://cdn.media.amplience.net/s/hottopic/36008138_hi" data-respaldo="imagenes/simbolo-diario.svg" alt="Poster de personajes de Gravity Falls" class="imagen-carrusel">
+                        <div class="texto-diapositiva">
+                            <h2>Un verano imposible</h2>
+                            <p>Dipper y Mabel descubren que cada rincón del pueblo guarda una pista.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <button class="boton-carrusel boton-anterior" id="boton-anterior" type="button" aria-label="Ver imagen anterior">&#10094;</button>
+                <button class="boton-carrusel boton-siguiente" id="boton-siguiente" type="button" aria-label="Ver imagen siguiente">&#10095;</button>
+
+                <div class="indicadores-carrusel" aria-label="Indicadores del carrusel">
+                    <button class="indicador-carrusel activo" type="button" aria-label="Mostrar imagen 1" data-posicion="0"></button>
+                    <button class="indicador-carrusel" type="button" aria-label="Mostrar imagen 2" data-posicion="1"></button>
+                    <button class="indicador-carrusel" type="button" aria-label="Mostrar imagen 3" data-posicion="2"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seccion principal de personajes -->
+        <section class="seccion-personajes" id="personajes">
+            <div class="titulo-seccion">
+                <p class="etiqueta-seccion">Habitantes del misterio</p>
+                <h2>Personajes de Gravity Falls</h2>
+            </div>
+
+            <div class="contenedor-personajes">
+                <article class="contenedor-tarjeta" tabindex="0">
+                    <div class="tarjeta-personaje">
+                        <div class="cara-tarjeta cara-frontal">
+                            <img src="https://toppng.com/uploads/preview/dipper-pines-gravity-falls-dipper-11562931636jupvp8fez9.png" data-respaldo="imagenes/dipper-pines.svg" alt="Dipper Pines" class="imagen-personaje">
+                            <h3 class="nombre-personaje">Dipper Pines</h3>
+                        </div>
+                        <div class="cara-tarjeta cara-trasera">
+                            <h3>Dipper Pines</h3>
+                            <p><strong>Edad:</strong> 12 anos.</p>
+                            <p><strong>Personalidad:</strong> curioso, responsable y algo nervioso.</p>
+                            <p><strong>Papel:</strong> investiga los misterios del pueblo usando el diario.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="contenedor-tarjeta" tabindex="0">
+                    <div class="tarjeta-personaje">
+                        <div class="cara-tarjeta cara-frontal">
+                            <img src="https://cdn.imgbin.com/24/21/15/imgbin-mabel-pines-dipper-pines-grunkle-stan-bill-cipher-character-others-yuvdQy1xKiCe7GSnerWZpeSE7.jpg" data-respaldo="imagenes/mabel-pines.svg" alt="Mabel Pines" class="imagen-personaje">
+                            <h3 class="nombre-personaje">Mabel Pines</h3>
+                        </div>
+                        <div class="cara-tarjeta cara-trasera">
+                            <h3>Mabel Pines</h3>
+                            <p><strong>Edad:</strong> 12 anos.</p>
+                            <p><strong>Personalidad:</strong> alegre, creativa y muy expresiva.</p>
+                            <p><strong>Papel:</strong> acompana las aventuras con humor, valentia y optimismo.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="contenedor-tarjeta" tabindex="0">
+                    <div class="tarjeta-personaje">
+                        <div class="cara-tarjeta cara-frontal">
+                            <img src="https://img.favpng.com/18/11/14/grunkle-stan-mabel-pines-dipper-pines-bill-cipher-stanford-pines-png-favpng-hbqgbavaUjEkWJuBnZCetdMEh.jpg" data-respaldo="imagenes/grunkle-stan.svg" alt="Grunkle Stan" class="imagen-personaje">
+                            <h3 class="nombre-personaje">Grunkle Stan</h3>
+                        </div>
+                        <div class="cara-tarjeta cara-trasera">
+                            <h3>Grunkle Stan</h3>
+                            <p><strong>Edad:</strong> adulto mayor.</p>
+                            <p><strong>Personalidad:</strong> astuto, sarcastico y protector.</p>
+                            <p><strong>Papel:</strong> dirige la cabana y oculta mas de un secreto familiar.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="contenedor-tarjeta" tabindex="0">
+                    <div class="tarjeta-personaje">
+                        <div class="cara-tarjeta cara-frontal">
+                            <img src="https://image.pngaaa.com/972/290972-middle.png" data-respaldo="imagenes/soos.svg" alt="Soos Ramirez" class="imagen-personaje">
+                            <h3 class="nombre-personaje">Soos</h3>
+                        </div>
+                        <div class="cara-tarjeta cara-trasera">
+                            <h3>Soos</h3>
+                            <p><strong>Edad:</strong> joven adulto.</p>
+                            <p><strong>Personalidad:</strong> amable, leal y divertido.</p>
+                            <p><strong>Papel:</strong> ayuda en la cabana y siempre esta listo para una aventura.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="contenedor-tarjeta" tabindex="0">
+                    <div class="tarjeta-personaje">
+                        <div class="cara-tarjeta cara-frontal">
+                            <img src="https://e7.pngegg.com/pngimages/927/446/png-clipart-wendy-pony-head-wendy-corduroy-hat-cartoon.png" data-respaldo="imagenes/wendy.svg" alt="Wendy Corduroy" class="imagen-personaje">
+                            <h3 class="nombre-personaje">Wendy</h3>
+                        </div>
+                        <div class="cara-tarjeta cara-trasera">
+                            <h3>Wendy</h3>
+                            <p><strong>Edad:</strong> adolescente.</p>
+                            <p><strong>Personalidad:</strong> tranquila, valiente y directa.</p>
+                            <p><strong>Papel:</strong> trabaja en la cabana y conoce bien el bosque.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="contenedor-tarjeta" tabindex="0">
+                    <div class="tarjeta-personaje">
+                        <div class="cara-tarjeta cara-frontal">
+                            <img src="https://e7.pngegg.com/pngimages/620/769/png-clipart-bill-cipher-illuminati-eye-of-providence-symbol-others-miscellaneous-angle.png" data-respaldo="imagenes/bill-cipher.svg" alt="Bill Cipher" class="imagen-personaje">
+                            <h3 class="nombre-personaje">Bill Cipher</h3>
+                        </div>
+                        <div class="cara-tarjeta cara-trasera">
+                            <h3>Bill Cipher</h3>
+                            <p><strong>Edad:</strong> entidad antigua.</p>
+                            <p><strong>Personalidad:</strong> caotico, manipulador y burlon.</p>
+                            <p><strong>Papel:</strong> representa la amenaza sobrenatural mas peligrosa.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seccion de misterios destacados -->
+        <section class="seccion-misterios" id="misterios">
+            <div class="titulo-seccion">
+                <p class="etiqueta-seccion">Casos del diario</p>
+                <h2>Misterios destacados</h2>
+            </div>
+
+            <div class="contenedor-misterios">
+                <article class="tarjeta-misterio">
+                    <span class="numero-misterio">01</span>
+                    <h3>El diario numero 3</h3>
+                    <p>El objeto que inicia la investigacion y revela criaturas, codigos y advertencias sobre el pueblo.</p>
+                </article>
+
+                <article class="tarjeta-misterio">
+                    <span class="numero-misterio">02</span>
+                    <h3>La Cabana del Misterio</h3>
+                    <p>Una trampa para turistas que tambien funciona como refugio, punto de reunion y escondite de secretos.</p>
+                </article>
+
+                <article class="tarjeta-misterio">
+                    <span class="numero-misterio">03</span>
+                    <h3>Bill Cipher</h3>
+                    <p>Una entidad que convierte los enigmas del pueblo en una amenaza mucho mas grande.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Galeria adicional de imagenes -->
+        <section class="seccion-galeria" id="galeria">
+            <div class="titulo-seccion">
+                <p class="etiqueta-seccion">Recortes del expediente</p>
+                <h2>Galeria de la serie</h2>
+            </div>
+
+            <div class="contenedor-galeria">
+                <figure class="elemento-galeria">
+                    <img src="https://febreteen.com.br/wp-content/uploads/2020/06/Gravity-Falls.jpg" data-respaldo="imagenes/simbolo-diario.svg" alt="Personajes principales de Gravity Falls">
+                    <figcaption>Equipo principal listo para investigar.</figcaption>
+                </figure>
+
+                <figure class="elemento-galeria">
+                    <img src="https://wallpapercat.com/w/full/5/e/7/127237-3840x2160-desktop-4k-gravity-falls-wallpaper-image.jpg" data-respaldo="imagenes/cabana-del-misterio.svg" alt="Cabana del Misterio rodeada de bosque">
+                    <figcaption>La Cabana del Misterio en medio del bosque.</figcaption>
+                </figure>
+
+                <figure class="elemento-galeria">
+                    <img src="https://img.razrisyika.ru/kart/13/50813-vse-personazhi-graviti-folz-25.jpg" data-respaldo="imagenes/bill-cipher.svg" alt="Rueda de simbolos y personajes de Gravity Falls">
+                    <figcaption>Simbolos, personajes y pistas conectadas.</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de pagina del proyecto -->
+    <footer class="pie-pagina">
+        <p>Proyecto academico inspirado en Gravity Falls - 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

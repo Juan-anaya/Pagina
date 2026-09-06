@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Grunkle Stan</title>
+  <desc id="descripcion">Retrato sencillo inspirado en Grunkle Stan.</desc>
+  <rect width="320" height="320" rx="160" fill="#173923"/>
+  <path d="M111 72 H209 L198 122 H122 Z" fill="#8f1f21"/>
+  <path d="M128 50 H192 V80 H128 Z" fill="#b83332"/>
+  <circle cx="160" cy="170" r="82" fill="#e8b883"/>
+  <path d="M86 148 C112 104 208 104 235 148 C192 130 126 130 86 148 Z" fill="#4d3321"/>
+  <path d="M111 178 H145 M176 178 H210" stroke="#221810" stroke-width="10" stroke-linecap="round"/>
+  <path d="M148 210 C158 216 170 216 180 210" fill="none" stroke="#6b341e" stroke-width="7" stroke-linecap="round"/>
+  <path d="M94 292 C116 240 204 240 226 292 Z" fill="#2f4c86"/>
+  <path d="M111 253 L160 290 L209 253 L218 292 H102 Z" fill="#17110c"/>
+</svg>

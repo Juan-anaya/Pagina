@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Dipper Pines</title>
+  <desc id="descripcion">Retrato sencillo inspirado en Dipper Pines.</desc>
+  <rect width="320" height="320" rx="160" fill="#173923"/>
+  <circle cx="160" cy="170" r="86" fill="#f0bf8b"/>
+  <path d="M78 138 C100 78 222 78 244 138 C210 120 116 120 78 138 Z" fill="#5a351e"/>
+  <path d="M72 120 C102 62 220 62 250 120 L230 145 C190 126 125 126 90 145 Z" fill="#f5f0df"/>
+  <path d="M120 78 H206 L232 122 C186 104 137 104 91 122 Z" fill="#2f5ea8"/>
+  <circle cx="138" cy="170" r="8" fill="#1f1a14"/>
+  <circle cx="185" cy="170" r="8" fill="#1f1a14"/>
+  <path d="M140 214 C154 224 173 224 188 214" fill="none" stroke="#6b341e" stroke-width="7" stroke-linecap="round"/>
+  <path d="M100 286 C116 244 205 244 222 286 Z" fill="#c23b30"/>
+</svg>
