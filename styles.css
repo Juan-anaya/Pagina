@@ -1,0 +1,547 @@
+/* Configuracion general de la pagina */
+:root {
+    --verde-bosque: #163b28;
+    --verde-musgo: #2d6041;
+    --verde-claro: #8fb85a;
+    --marron-madera: #6b4423;
+    --marron-oscuro: #2a1a12;
+    --amarillo-antiguo: #f2c14e;
+    --crema-papel: #f6e2a6;
+    --rojo-senal: #b94732;
+    --sombra-profunda: rgba(12, 20, 16, 0.45);
+    --borde-suave: rgba(246, 226, 166, 0.28);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--crema-papel);
+    background:
+        radial-gradient(circle at top left, rgba(242, 193, 78, 0.18), transparent 28rem),
+        linear-gradient(135deg, #102318 0%, #1b3b2b 42%, #21170f 100%);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font: inherit;
+}
+
+/* Encabezado */
+.encabezado-principal {
+    position: relative;
+    padding: 3.5rem 1.25rem 2.4rem;
+    overflow: hidden;
+    text-align: center;
+    background:
+        linear-gradient(rgba(13, 30, 20, 0.82), rgba(13, 30, 20, 0.65)),
+        url("imagenes/bosque-misterioso.svg") center 34% / cover no-repeat;
+    border-bottom: 3px solid rgba(242, 193, 78, 0.42);
+}
+
+.encabezado-principal::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 1rem;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--marron-madera) 0 2.5rem,
+        var(--marron-oscuro) 2.5rem 3rem
+    );
+}
+
+.contenido-encabezado {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.etiqueta-encabezado,
+.etiqueta-seccion {
+    margin: 0 0 0.55rem;
+    color: var(--amarillo-antiguo);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.encabezado-principal h1 {
+    margin: 0;
+    color: #fff4b8;
+    font-size: clamp(3rem, 9vw, 6.5rem);
+    line-height: 0.95;
+    text-shadow: 0 0.4rem 0 var(--marron-oscuro), 0 0 1.5rem rgba(242, 193, 78, 0.45);
+}
+
+.subtitulo-encabezado {
+    max-width: 620px;
+    margin: 1.1rem auto 0;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+main {
+    width: min(1180px, calc(100% - 2rem));
+    margin: 0 auto;
+}
+
+/* Carrusel */
+.seccion-carrusel {
+    margin: 2.3rem 0 3rem;
+}
+
+.carrusel {
+    position: relative;
+    min-height: 420px;
+    overflow: hidden;
+    border: 2px solid var(--borde-suave);
+    border-radius: 8px;
+    box-shadow: 0 1.4rem 3rem var(--sombra-profunda);
+    background: #0f2218;
+}
+
+.contenedor-diapositivas,
+.diapositiva-carrusel {
+    height: 420px;
+}
+
+.diapositiva-carrusel {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1.35fr 0.9fr;
+    align-items: center;
+    opacity: 0;
+    transform: scale(1.02);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+    pointer-events: none;
+}
+
+.diapositiva-carrusel.visible {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.imagen-carrusel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #183225;
+}
+
+.texto-diapositiva {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.3rem 5.2rem 2.3rem 2rem;
+    background:
+        linear-gradient(90deg, rgba(13, 27, 19, 0.35), rgba(13, 27, 19, 0.96) 28%),
+        linear-gradient(160deg, rgba(242, 193, 78, 0.18), rgba(185, 71, 50, 0.1));
+}
+
+.texto-diapositiva h2 {
+    margin: 0 0 0.7rem;
+    color: #fff3ab;
+    font-size: clamp(1.8rem, 4vw, 3.6rem);
+    line-height: 1.02;
+}
+
+.texto-diapositiva p {
+    margin: 0;
+    max-width: 430px;
+    color: #f8e8b9;
+    font-size: 1.08rem;
+    line-height: 1.65;
+}
+
+.boton-carrusel {
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    width: 3rem;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    color: #fff2b2;
+    background: rgba(42, 26, 18, 0.74);
+    border: 1px solid rgba(246, 226, 166, 0.55);
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.boton-carrusel:hover,
+.boton-carrusel:focus-visible {
+    background: var(--rojo-senal);
+    transform: translateY(-50%) scale(1.08);
+    outline: none;
+}
+
+.boton-anterior {
+    left: 1rem;
+}
+
+.boton-siguiente {
+    right: 1rem;
+}
+
+.indicadores-carrusel {
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    z-index: 5;
+    display: flex;
+    gap: 0.55rem;
+    transform: translateX(-50%);
+}
+
+.indicador-carrusel {
+    width: 0.85rem;
+    height: 0.85rem;
+    padding: 0;
+    border: 1px solid rgba(246, 226, 166, 0.8);
+    border-radius: 50%;
+    background: rgba(246, 226, 166, 0.35);
+    cursor: pointer;
+}
+
+.indicador-carrusel.activo,
+.indicador-carrusel:hover,
+.indicador-carrusel:focus-visible {
+    background: var(--amarillo-antiguo);
+    outline: none;
+}
+
+/* Personajes */
+.seccion-personajes {
+    padding: 0 0 3.5rem;
+}
+
+.titulo-seccion {
+    margin-bottom: 1.6rem;
+    text-align: center;
+}
+
+.titulo-seccion h2 {
+    margin: 0;
+    color: #fff3ab;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-shadow: 0 0.25rem 0 var(--marron-oscuro);
+}
+
+.contenedor-personajes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.4rem;
+}
+
+.contenedor-tarjeta {
+    min-height: 360px;
+    perspective: 1100px;
+    outline: none;
+}
+
+.tarjeta-personaje {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    transform-style: preserve-3d;
+    transition: transform 0.75s ease;
+}
+
+.contenedor-tarjeta:hover .tarjeta-personaje,
+.contenedor-tarjeta:focus .tarjeta-personaje {
+    transform: rotateY(180deg);
+}
+
+.cara-tarjeta {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.3rem;
+    overflow: hidden;
+    border: 2px solid rgba(246, 226, 166, 0.34);
+    border-radius: 8px;
+    background:
+        linear-gradient(160deg, rgba(45, 96, 65, 0.92), rgba(42, 26, 18, 0.95)),
+        radial-gradient(circle at 20% 10%, rgba(242, 193, 78, 0.32), transparent 15rem);
+    box-shadow: 0 1rem 2rem rgba(12, 20, 16, 0.35);
+    backface-visibility: hidden;
+}
+
+.cara-frontal::before {
+    content: "";
+    position: absolute;
+    inset: 0.8rem;
+    border: 1px dashed rgba(246, 226, 166, 0.38);
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+.cara-trasera {
+    align-items: flex-start;
+    justify-content: center;
+    color: #301d12;
+    background:
+        linear-gradient(160deg, rgba(246, 226, 166, 0.96), rgba(225, 175, 86, 0.94)),
+        radial-gradient(circle at top right, rgba(185, 71, 50, 0.22), transparent 12rem);
+    transform: rotateY(180deg);
+}
+
+.imagen-personaje {
+    position: relative;
+    z-index: 1;
+    width: min(78%, 220px);
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    padding: 0.45rem;
+    border-radius: 50%;
+    background: rgba(246, 226, 166, 0.2);
+}
+
+.nombre-personaje,
+.cara-trasera h3 {
+    margin: 0;
+    font-size: 1.55rem;
+    line-height: 1.1;
+}
+
+.nombre-personaje {
+    position: relative;
+    z-index: 1;
+    color: #fff3ab;
+    text-align: center;
+    text-shadow: 0 0.18rem 0 var(--marron-oscuro);
+}
+
+.cara-trasera p {
+    margin: 0.45rem 0 0;
+    font-size: 1rem;
+    line-height: 1.45;
+}
+
+/* Misterios destacados */
+.seccion-misterios,
+.seccion-galeria {
+    padding: 0 0 3.5rem;
+}
+
+.contenedor-misterios {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+}
+
+.tarjeta-misterio {
+    position: relative;
+    min-height: 220px;
+    padding: 1.4rem;
+    overflow: hidden;
+    border: 2px solid rgba(246, 226, 166, 0.28);
+    border-radius: 8px;
+    background:
+        linear-gradient(150deg, rgba(246, 226, 166, 0.96), rgba(173, 113, 50, 0.92)),
+        radial-gradient(circle at top right, rgba(185, 71, 50, 0.26), transparent 12rem);
+    color: #2b1a11;
+    box-shadow: 0 1rem 2rem rgba(12, 20, 16, 0.3);
+}
+
+.tarjeta-misterio::after {
+    content: "?";
+    position: absolute;
+    right: 1rem;
+    bottom: -1.8rem;
+    color: rgba(42, 26, 18, 0.1);
+    font-size: 8rem;
+    font-weight: 700;
+}
+
+.numero-misterio {
+    display: inline-block;
+    margin-bottom: 1.1rem;
+    padding: 0.2rem 0.55rem;
+    color: #fff3ab;
+    background: var(--rojo-senal);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.tarjeta-misterio h3 {
+    margin: 0 0 0.7rem;
+    font-size: 1.45rem;
+}
+
+.tarjeta-misterio p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+/* Galeria */
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr 0.9fr;
+    gap: 1rem;
+}
+
+.elemento-galeria {
+    min-height: 320px;
+    margin: 0;
+    overflow: hidden;
+    border: 2px solid rgba(246, 226, 166, 0.3);
+    border-radius: 8px;
+    background: #111d13;
+    box-shadow: 0 1rem 2rem rgba(12, 20, 16, 0.34);
+}
+
+.elemento-galeria:first-child {
+    grid-row: span 2;
+}
+
+.elemento-galeria img {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+}
+
+.elemento-galeria figcaption {
+    min-height: 3.4rem;
+    padding: 0.85rem 1rem;
+    color: #f8e8b9;
+    background: rgba(25, 17, 12, 0.96);
+    font-size: 0.95rem;
+    line-height: 1.35;
+}
+
+.pie-pagina {
+    padding: 1.4rem 1rem;
+    color: #f8e8b9;
+    text-align: center;
+    background: #19110c;
+    border-top: 3px solid rgba(242, 193, 78, 0.42);
+}
+
+.pie-pagina p {
+    margin: 0;
+}
+
+/* Adaptacion para tablet */
+@media (max-width: 900px) {
+    .diapositiva-carrusel {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-carrusel {
+        position: absolute;
+        inset: 0;
+        opacity: 0.48;
+    }
+
+    .texto-diapositiva {
+        position: relative;
+        z-index: 1;
+        padding: 2rem 4.8rem;
+        background: linear-gradient(90deg, rgba(13, 27, 19, 0.92), rgba(13, 27, 19, 0.62));
+    }
+
+    .contenedor-personajes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contenedor-misterios,
+    .contenedor-galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .elemento-galeria:first-child {
+        grid-row: auto;
+    }
+}
+
+/* Adaptacion para celular */
+@media (max-width: 620px) {
+    main {
+        width: min(100% - 1rem, 1180px);
+    }
+
+    .encabezado-principal {
+        padding: 2.4rem 1rem 2rem;
+    }
+
+    .subtitulo-encabezado {
+        font-size: 1rem;
+    }
+
+    .carrusel,
+    .contenedor-diapositivas,
+    .diapositiva-carrusel {
+        height: 360px;
+        min-height: 360px;
+    }
+
+    .texto-diapositiva {
+        padding: 1.5rem 3.8rem;
+    }
+
+    .texto-diapositiva p {
+        font-size: 1rem;
+    }
+
+    .boton-carrusel {
+        width: 2.55rem;
+        height: 2.55rem;
+    }
+
+    .boton-anterior {
+        left: 0.55rem;
+    }
+
+    .boton-siguiente {
+        right: 0.55rem;
+    }
+
+    .contenedor-personajes {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contenedor-tarjeta,
+    .tarjeta-personaje {
+        min-height: 330px;
+    }
+
+    .tarjeta-misterio {
+        min-height: auto;
+    }
+
+    .elemento-galeria,
+    .elemento-galeria img {
+        min-height: 240px;
+    }
+}
