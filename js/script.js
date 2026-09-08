@@ -3,7 +3,6 @@ const imagenesCarrusel = document.querySelectorAll(".diapositiva-carrusel");
 const indicadoresCarrusel = document.querySelectorAll(".indicador-carrusel");
 const botonAnterior = document.getElementById("boton-anterior");
 const botonSiguiente = document.getElementById("boton-siguiente");
-const imagenesExternas = document.querySelectorAll("img[data-respaldo]");
 const puntosMapa = document.querySelectorAll(".punto-mapa");
 const nombreLugarMapa = document.getElementById("nombre-lugar-mapa");
 const descripcionLugarMapa = document.getElementById("descripcion-lugar-mapa");
@@ -49,25 +48,6 @@ botonAnterior.addEventListener("click", function () {
     reiniciarCambioAutomatico();
 });
 
-indicadoresCarrusel.forEach(function (indicador) {
-    indicador.addEventListener("click", function () {
-        const posicionImagen = Number(indicador.dataset.posicion);
-        mostrarImagen(posicionImagen);
-        reiniciarCambioAutomatico();
-    });
-});
-
-// Usa una imagen local si una imagen externa no se puede cargar
-imagenesExternas.forEach(function (imagen) {
-    imagen.addEventListener("error", function () {
-        if (imagen.src.includes(imagen.dataset.respaldo)) {
-            return;
-        }
-
-        imagen.src = imagen.dataset.respaldo;
-    });
-});
-
 function mostrarLugarMapa(puntoSeleccionado) {
     puntosMapa.forEach(function (punto) {
         punto.classList.remove("activo");
@@ -81,6 +61,14 @@ function mostrarLugarMapa(puntoSeleccionado) {
 puntosMapa.forEach(function (punto) {
     punto.addEventListener("click", function () {
         mostrarLugarMapa(punto);
+    });
+});
+
+indicadoresCarrusel.forEach(function (indicador) {
+    indicador.addEventListener("click", function () {
+        const posicionImagen = Number(indicador.dataset.posicion);
+        mostrarImagen(posicionImagen);
+        reiniciarCambioAutomatico();
     });
 });
 
