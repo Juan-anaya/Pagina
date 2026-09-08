@@ -21,13 +21,17 @@ html {
 }
 
 body {
+    position: relative;
     margin: 0;
     min-height: 100vh;
     font-family: Georgia, "Times New Roman", serif;
     color: var(--crema-papel);
     background:
+        linear-gradient(90deg, rgba(246, 226, 166, 0.04) 1px, transparent 1px),
+        linear-gradient(rgba(246, 226, 166, 0.035) 1px, transparent 1px),
         radial-gradient(circle at top left, rgba(242, 193, 78, 0.18), transparent 28rem),
         linear-gradient(135deg, #102318 0%, #1b3b2b 42%, #21170f 100%);
+    background-size: 34px 34px, 34px 34px, auto, auto;
 }
 
 img {
@@ -47,7 +51,7 @@ button {
     text-align: center;
     background:
         linear-gradient(rgba(13, 30, 20, 0.82), rgba(13, 30, 20, 0.65)),
-        url("imagenes/bosque-misterioso.svg") center 34% / cover no-repeat;
+        url("../imagenes/bosque-real-gravity-falls.png") center 34% / cover no-repeat;
     border-bottom: 3px solid rgba(242, 193, 78, 0.42);
 }
 
@@ -94,6 +98,37 @@ button {
     line-height: 1.7;
 }
 
+.navegacion-principal {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.65rem 1rem;
+    background: rgba(25, 17, 12, 0.92);
+    border-bottom: 1px solid rgba(246, 226, 166, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+.navegacion-principal a {
+    padding: 0.45rem 0.75rem;
+    color: #f8e8b9;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.navegacion-principal a:hover,
+.navegacion-principal a:focus-visible {
+    color: #2a1a12;
+    background: var(--amarillo-antiguo);
+    outline: none;
+}
+
 main {
     width: min(1180px, calc(100% - 2rem));
     margin: 0 auto;
@@ -112,6 +147,7 @@ main {
     border-radius: 8px;
     box-shadow: 0 1.4rem 3rem var(--sombra-profunda);
     background: #0f2218;
+    transform: rotate(-0.25deg);
 }
 
 .contenedor-diapositivas,
@@ -142,6 +178,15 @@ main {
     height: 100%;
     object-fit: cover;
     background-color: #183225;
+    filter: saturate(0.95) contrast(1.05);
+}
+
+.diapositiva-recorte .imagen-carrusel {
+    padding: 1rem;
+    object-fit: contain;
+    background:
+        linear-gradient(135deg, rgba(246, 226, 166, 0.18), rgba(25, 17, 12, 0.86)),
+        #111d13;
 }
 
 .texto-diapositiva {
@@ -153,6 +198,20 @@ main {
     background:
         linear-gradient(90deg, rgba(13, 27, 19, 0.35), rgba(13, 27, 19, 0.96) 28%),
         linear-gradient(160deg, rgba(242, 193, 78, 0.18), rgba(185, 71, 50, 0.1));
+}
+
+.sello-diapositiva {
+    width: fit-content;
+    margin-bottom: 1rem;
+    padding: 0.32rem 0.7rem;
+    color: #2a1a12;
+    background: var(--amarillo-antiguo);
+    border: 2px solid rgba(42, 26, 18, 0.55);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transform: rotate(-2deg);
 }
 
 .texto-diapositiva h2 {
@@ -300,6 +359,17 @@ main {
     pointer-events: none;
 }
 
+.cara-frontal::after {
+    content: "";
+    position: absolute;
+    top: 0.75rem;
+    width: 5.5rem;
+    height: 1.25rem;
+    background: rgba(246, 226, 166, 0.55);
+    box-shadow: 0 0.25rem 0.55rem rgba(42, 26, 18, 0.24);
+    transform: rotate(-5deg);
+}
+
 .cara-trasera {
     align-items: flex-start;
     justify-content: center;
@@ -313,12 +383,14 @@ main {
 .imagen-personaje {
     position: relative;
     z-index: 1;
-    width: min(78%, 220px);
-    aspect-ratio: 1 / 1;
+    width: min(82%, 230px);
+    height: 220px;
     object-fit: contain;
-    padding: 0.45rem;
-    border-radius: 50%;
-    background: rgba(246, 226, 166, 0.2);
+    padding: 0.65rem;
+    border: 0.45rem solid #f3dfaa;
+    border-radius: 6px;
+    background: rgba(246, 226, 166, 0.75);
+    box-shadow: 0 0.65rem 1rem rgba(12, 20, 16, 0.35);
 }
 
 .nombre-personaje,
@@ -342,12 +414,215 @@ main {
     line-height: 1.45;
 }
 
-/* Misterios destacados */
+/* Mapa del misterio */
+.seccion-mapa,
+.seccion-diario,
 .seccion-misterios,
 .seccion-galeria {
     padding: 0 0 3.5rem;
 }
 
+.panel-mapa {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(270px, 0.75fr);
+    gap: 1.2rem;
+    align-items: stretch;
+}
+
+.mapa-misterio {
+    position: relative;
+    min-height: 430px;
+    overflow: hidden;
+    border: 2px solid rgba(86, 48, 25, 0.65);
+    border-radius: 8px;
+    background:
+        linear-gradient(rgba(68, 44, 24, 0.16) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(68, 44, 24, 0.16) 1px, transparent 1px),
+        radial-gradient(circle at 72% 35%, rgba(47, 111, 126, 0.45), transparent 8rem),
+        linear-gradient(135deg, #ead18d, #b7793f);
+    background-size: 34px 34px, 34px 34px, auto, auto;
+    box-shadow: inset 0 0 3rem rgba(59, 34, 18, 0.32), 0 1rem 2rem rgba(12, 20, 16, 0.32);
+}
+
+.mapa-misterio::before {
+    content: "";
+    position: absolute;
+    inset: 1.1rem;
+    border: 2px dashed rgba(74, 45, 24, 0.42);
+    border-radius: 6px;
+}
+
+.mapa-misterio::after {
+    content: "Gravity Falls";
+    position: absolute;
+    right: 1.4rem;
+    bottom: 1.1rem;
+    color: rgba(58, 36, 20, 0.58);
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-weight: 700;
+    transform: rotate(-4deg);
+}
+
+.rio-mapa,
+.camino-mapa {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.rio-mapa {
+    background: linear-gradient(125deg, transparent 0 42%, rgba(37, 99, 125, 0.35) 42% 48%, transparent 48% 100%);
+    transform: skewY(-9deg);
+}
+
+.camino-mapa {
+    background:
+        radial-gradient(ellipse at 24% 72%, transparent 0 18%, rgba(93, 57, 27, 0.3) 19% 23%, transparent 24%),
+        radial-gradient(ellipse at 48% 52%, transparent 0 16%, rgba(93, 57, 27, 0.25) 17% 22%, transparent 23%),
+        radial-gradient(ellipse at 70% 34%, transparent 0 15%, rgba(93, 57, 27, 0.24) 16% 20%, transparent 21%);
+}
+
+.punto-mapa {
+    position: absolute;
+    z-index: 2;
+    width: 1.4rem;
+    height: 1.4rem;
+    padding: 0;
+    border: 3px solid #2a1a12;
+    border-radius: 50% 50% 50% 0;
+    background: var(--rojo-senal);
+    cursor: pointer;
+    transform: rotate(-45deg);
+    box-shadow: 0 0.35rem 0.8rem rgba(42, 26, 18, 0.35);
+}
+
+.punto-mapa span {
+    position: absolute;
+    left: 1.2rem;
+    bottom: 1.1rem;
+    min-width: max-content;
+    padding: 0.2rem 0.45rem;
+    color: #2a1a12;
+    background: rgba(246, 226, 166, 0.86);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transform: rotate(45deg);
+}
+
+.punto-mapa.activo,
+.punto-mapa:hover,
+.punto-mapa:focus-visible {
+    background: var(--amarillo-antiguo);
+    outline: none;
+}
+
+.punto-cabana {
+    left: 22%;
+    top: 58%;
+}
+
+.punto-bosque {
+    left: 58%;
+    top: 28%;
+}
+
+.punto-lago {
+    left: 73%;
+    top: 57%;
+}
+
+.punto-portal {
+    left: 42%;
+    top: 38%;
+}
+
+.detalle-mapa {
+    padding: 1.4rem;
+    color: #2b1a11;
+    border: 2px solid rgba(86, 48, 25, 0.55);
+    border-radius: 8px;
+    background:
+        linear-gradient(160deg, rgba(246, 226, 166, 0.97), rgba(220, 168, 83, 0.92)),
+        radial-gradient(circle at top left, rgba(185, 71, 50, 0.18), transparent 10rem);
+    box-shadow: 0 1rem 2rem rgba(12, 20, 16, 0.3);
+}
+
+.detalle-mapa h3 {
+    margin: 0 0 0.8rem;
+    font-size: 1.8rem;
+}
+
+.detalle-mapa p:last-child {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Diario */
+.contenedor-diario {
+    display: grid;
+    grid-template-columns: minmax(230px, 0.7fr) minmax(0, 1.3fr);
+    gap: 1.2rem;
+    align-items: stretch;
+}
+
+.portada-diario {
+    display: grid;
+    place-items: center;
+    min-height: 360px;
+    padding: 1.3rem;
+    border: 2px solid rgba(246, 226, 166, 0.28);
+    border-radius: 8px;
+    background: linear-gradient(145deg, rgba(54, 28, 18, 0.95), rgba(126, 45, 32, 0.92));
+    box-shadow: 0 1rem 2rem rgba(12, 20, 16, 0.35);
+}
+
+.portada-diario img {
+    width: min(100%, 310px);
+    filter: drop-shadow(0 1rem 1.4rem rgba(12, 20, 16, 0.45));
+}
+
+.paginas-diario {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.nota-diario {
+    min-height: 230px;
+    padding: 1.3rem;
+    color: #2b1a11;
+    border: 2px solid rgba(86, 48, 25, 0.35);
+    border-radius: 6px;
+    background:
+        linear-gradient(rgba(123, 72, 35, 0.12) 1px, transparent 1px),
+        linear-gradient(160deg, #f7e1a6, #dfb96c);
+    background-size: 100% 1.8rem, auto;
+    box-shadow: 0 0.85rem 1.4rem rgba(12, 20, 16, 0.26);
+    transform: rotate(-0.7deg);
+}
+
+.nota-diario:nth-child(2) {
+    transform: rotate(0.65deg);
+}
+
+.nota-diario:nth-child(3) {
+    transform: rotate(-0.2deg);
+}
+
+.nota-diario h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.35rem;
+}
+
+.nota-diario p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+/* Misterios destacados */
 .contenedor-misterios {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -474,6 +749,15 @@ main {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .panel-mapa,
+    .contenedor-diario {
+        grid-template-columns: 1fr;
+    }
+
+    .paginas-diario {
+        grid-template-columns: 1fr;
+    }
+
     .contenedor-misterios,
     .contenedor-galeria {
         grid-template-columns: 1fr;
@@ -534,6 +818,18 @@ main {
     .contenedor-tarjeta,
     .tarjeta-personaje {
         min-height: 330px;
+    }
+
+    .imagen-personaje {
+        height: 205px;
+    }
+
+    .mapa-misterio {
+        min-height: 360px;
+    }
+
+    .punto-mapa span {
+        font-size: 0.78rem;
     }
 
     .tarjeta-misterio {

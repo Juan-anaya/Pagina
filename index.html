@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gravity Falls - Pueblo de Misterios</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Encabezado principal de la pagina -->
@@ -16,30 +16,40 @@
         </div>
     </header>
 
+    <nav class="navegacion-principal" aria-label="Navegacion principal">
+        <a href="#personajes">Personajes</a>
+        <a href="#mapa">Mapa</a>
+        <a href="#diario">Diario</a>
+        <a href="#galeria">Galeria</a>
+    </nav>
+
     <main>
         <!-- Carrusel de imagenes del ambiente -->
         <section class="seccion-carrusel" aria-label="Imagenes del pueblo de Gravity Falls">
             <div class="carrusel">
                 <div class="contenedor-diapositivas">
                     <article class="diapositiva-carrusel visible">
-                        <img src="https://cdn.wallpapersafari.com/95/11/KyUrza.png" data-respaldo="imagenes/bosque-misterioso.svg" alt="Bosque de Gravity Falls con pinos y montanas" class="imagen-carrusel">
+                        <img src="imagenes/bosque-real-gravity-falls.png" data-respaldo="imagenes/bosque-misterioso.svg" alt="Bosque de Gravity Falls con pinos y montanas" class="imagen-carrusel">
                         <div class="texto-diapositiva">
+                            <span class="sello-diapositiva">Archivo 01</span>
                             <h2>Bosque de secretos</h2>
                             <p>Los arboles parecen moverse cuando nadie los mira.</p>
                         </div>
                     </article>
 
                     <article class="diapositiva-carrusel">
-                        <img src="https://wallpapercat.com/w/full/5/e/7/127237-3840x2160-desktop-4k-gravity-falls-wallpaper-image.jpg" data-respaldo="imagenes/cabana-del-misterio.svg" alt="Cabana del Misterio de Gravity Falls" class="imagen-carrusel">
+                        <img src="imagenes/cabana-real-gravity-falls.jpg" data-respaldo="imagenes/cabana-del-misterio.svg" alt="Cabana del Misterio de Gravity Falls" class="imagen-carrusel">
                         <div class="texto-diapositiva">
+                            <span class="sello-diapositiva">Archivo 02</span>
                             <h2>La cabana del misterio</h2>
                             <p>Recuerdos extranos, objetos imposibles y visitantes curiosos.</p>
                         </div>
                     </article>
 
-                    <article class="diapositiva-carrusel">
-                        <img src="https://cdn.media.amplience.net/s/hottopic/36008138_hi" data-respaldo="imagenes/simbolo-diario.svg" alt="Poster de personajes de Gravity Falls" class="imagen-carrusel">
+                    <article class="diapositiva-carrusel diapositiva-recorte">
+                        <img src="imagenes/equipo-real-gravity-falls.jpg" data-respaldo="imagenes/simbolo-diario.svg" alt="Personajes principales de Gravity Falls" class="imagen-carrusel">
                         <div class="texto-diapositiva">
+                            <span class="sello-diapositiva">Archivo 03</span>
                             <h2>Un verano imposible</h2>
                             <p>Dipper y Mabel descubren que cada rincón del pueblo guarda una pista.</p>
                         </div>
@@ -68,7 +78,7 @@
                 <article class="contenedor-tarjeta" tabindex="0">
                     <div class="tarjeta-personaje">
                         <div class="cara-tarjeta cara-frontal">
-                            <img src="https://toppng.com/uploads/preview/dipper-pines-gravity-falls-dipper-11562931636jupvp8fez9.png" data-respaldo="imagenes/dipper-pines.svg" alt="Dipper Pines" class="imagen-personaje">
+                            <img src="imagenes/dipper-real.png" data-respaldo="imagenes/dipper-pines.svg" alt="Dipper Pines" class="imagen-personaje">
                             <h3 class="nombre-personaje">Dipper Pines</h3>
                         </div>
                         <div class="cara-tarjeta cara-trasera">
@@ -83,7 +93,7 @@
                 <article class="contenedor-tarjeta" tabindex="0">
                     <div class="tarjeta-personaje">
                         <div class="cara-tarjeta cara-frontal">
-                            <img src="https://cdn.imgbin.com/24/21/15/imgbin-mabel-pines-dipper-pines-grunkle-stan-bill-cipher-character-others-yuvdQy1xKiCe7GSnerWZpeSE7.jpg" data-respaldo="imagenes/mabel-pines.svg" alt="Mabel Pines" class="imagen-personaje">
+                            <img src="imagenes/mabel-real.jpg" data-respaldo="imagenes/mabel-pines.svg" alt="Mabel Pines" class="imagen-personaje">
                             <h3 class="nombre-personaje">Mabel Pines</h3>
                         </div>
                         <div class="cara-tarjeta cara-trasera">
@@ -98,7 +108,7 @@
                 <article class="contenedor-tarjeta" tabindex="0">
                     <div class="tarjeta-personaje">
                         <div class="cara-tarjeta cara-frontal">
-                            <img src="https://img.favpng.com/18/11/14/grunkle-stan-mabel-pines-dipper-pines-bill-cipher-stanford-pines-png-favpng-hbqgbavaUjEkWJuBnZCetdMEh.jpg" data-respaldo="imagenes/grunkle-stan.svg" alt="Grunkle Stan" class="imagen-personaje">
+                            <img src="imagenes/stan-real.jpg" data-respaldo="imagenes/grunkle-stan.svg" alt="Grunkle Stan" class="imagen-personaje">
                             <h3 class="nombre-personaje">Grunkle Stan</h3>
                         </div>
                         <div class="cara-tarjeta cara-trasera">
@@ -113,7 +123,7 @@
                 <article class="contenedor-tarjeta" tabindex="0">
                     <div class="tarjeta-personaje">
                         <div class="cara-tarjeta cara-frontal">
-                            <img src="https://image.pngaaa.com/972/290972-middle.png" data-respaldo="imagenes/soos.svg" alt="Soos Ramirez" class="imagen-personaje">
+                            <img src="imagenes/soos-real.png" data-respaldo="imagenes/soos.svg" alt="Soos Ramirez" class="imagen-personaje">
                             <h3 class="nombre-personaje">Soos</h3>
                         </div>
                         <div class="cara-tarjeta cara-trasera">
@@ -128,7 +138,7 @@
                 <article class="contenedor-tarjeta" tabindex="0">
                     <div class="tarjeta-personaje">
                         <div class="cara-tarjeta cara-frontal">
-                            <img src="https://e7.pngegg.com/pngimages/927/446/png-clipart-wendy-pony-head-wendy-corduroy-hat-cartoon.png" data-respaldo="imagenes/wendy.svg" alt="Wendy Corduroy" class="imagen-personaje">
+                            <img src="imagenes/wendy-real.png" data-respaldo="imagenes/wendy.svg" alt="Wendy Corduroy" class="imagen-personaje">
                             <h3 class="nombre-personaje">Wendy</h3>
                         </div>
                         <div class="cara-tarjeta cara-trasera">
@@ -143,7 +153,7 @@
                 <article class="contenedor-tarjeta" tabindex="0">
                     <div class="tarjeta-personaje">
                         <div class="cara-tarjeta cara-frontal">
-                            <img src="https://e7.pngegg.com/pngimages/620/769/png-clipart-bill-cipher-illuminati-eye-of-providence-symbol-others-miscellaneous-angle.png" data-respaldo="imagenes/bill-cipher.svg" alt="Bill Cipher" class="imagen-personaje">
+                            <img src="imagenes/bill-real.png" data-respaldo="imagenes/bill-cipher.svg" alt="Bill Cipher" class="imagen-personaje">
                             <h3 class="nombre-personaje">Bill Cipher</h3>
                         </div>
                         <div class="cara-tarjeta cara-trasera">
@@ -154,6 +164,74 @@
                         </div>
                     </div>
                 </article>
+            </div>
+        </section>
+
+        <!-- Mapa tematico del pueblo -->
+        <section class="seccion-mapa" id="mapa">
+            <div class="titulo-seccion">
+                <p class="etiqueta-seccion">Ruta del expediente</p>
+                <h2>Mapa del misterio</h2>
+            </div>
+
+            <div class="panel-mapa">
+                <div class="mapa-misterio" aria-label="Mapa del pueblo con lugares misteriosos">
+                    <span class="rio-mapa"></span>
+                    <span class="camino-mapa"></span>
+
+                    <button class="punto-mapa punto-cabana activo" type="button" data-nombre="Cabana del Misterio" data-descripcion="Base principal de Stan, Dipper y Mabel. Desde aqui salen muchas pistas y tambien varios problemas." aria-label="Ver informacion de la Cabana del Misterio">
+                        <span>Cabana</span>
+                    </button>
+
+                    <button class="punto-mapa punto-bosque" type="button" data-nombre="Bosque profundo" data-descripcion="Zona llena de criaturas extranas, arboles marcados y rastros que casi nunca llevan a un lugar normal." aria-label="Ver informacion del bosque profundo">
+                        <span>Bosque</span>
+                    </button>
+
+                    <button class="punto-mapa punto-lago" type="button" data-nombre="Lago Gravity Falls" data-descripcion="Lugar de excursiones, leyendas acuaticas y rumores sobre criaturas escondidas bajo la niebla." aria-label="Ver informacion del lago Gravity Falls">
+                        <span>Lago</span>
+                    </button>
+
+                    <button class="punto-mapa punto-portal" type="button" data-nombre="Zona del portal" data-descripcion="Un punto marcado como peligroso por su relacion con tecnologia secreta, dimensiones y energia desconocida." aria-label="Ver informacion de la zona del portal">
+                        <span>Portal</span>
+                    </button>
+                </div>
+
+                <aside class="detalle-mapa" aria-live="polite">
+                    <p class="etiqueta-seccion">Lugar seleccionado</p>
+                    <h3 id="nombre-lugar-mapa">Cabana del Misterio</h3>
+                    <p id="descripcion-lugar-mapa">Base principal de Stan, Dipper y Mabel. Desde aqui salen muchas pistas y tambien varios problemas.</p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Informacion sobre el diario -->
+        <section class="seccion-diario" id="diario">
+            <div class="titulo-seccion">
+                <p class="etiqueta-seccion">Paginas encontradas</p>
+                <h2>Informacion sobre el diario</h2>
+            </div>
+
+            <div class="contenedor-diario">
+                <div class="portada-diario">
+                    <img src="imagenes/simbolo-diario.svg" alt="Diario rojo con mano dorada">
+                </div>
+
+                <div class="paginas-diario">
+                    <article class="nota-diario">
+                        <h3>Que contiene</h3>
+                        <p>El diario registra criaturas, lugares, simbolos y advertencias escritas por alguien que ya habia investigado el pueblo.</p>
+                    </article>
+
+                    <article class="nota-diario">
+                        <h3>Por que importa</h3>
+                        <p>Funciona como guia para resolver enigmas, pero tambien demuestra que Gravity Falls es mas peligroso de lo que parece.</p>
+                    </article>
+
+                    <article class="nota-diario">
+                        <h3>Codigos y pistas</h3>
+                        <p>La serie usa mensajes ocultos, claves y detalles pequenos para que el espectador tambien participe en el misterio.</p>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -194,17 +272,17 @@
 
             <div class="contenedor-galeria">
                 <figure class="elemento-galeria">
-                    <img src="https://febreteen.com.br/wp-content/uploads/2020/06/Gravity-Falls.jpg" data-respaldo="imagenes/simbolo-diario.svg" alt="Personajes principales de Gravity Falls">
+                    <img src="imagenes/equipo-real-gravity-falls.jpg" data-respaldo="imagenes/simbolo-diario.svg" alt="Personajes principales de Gravity Falls">
                     <figcaption>Equipo principal listo para investigar.</figcaption>
                 </figure>
 
                 <figure class="elemento-galeria">
-                    <img src="https://wallpapercat.com/w/full/5/e/7/127237-3840x2160-desktop-4k-gravity-falls-wallpaper-image.jpg" data-respaldo="imagenes/cabana-del-misterio.svg" alt="Cabana del Misterio rodeada de bosque">
+                    <img src="imagenes/cabana-real-gravity-falls.jpg" data-respaldo="imagenes/cabana-del-misterio.svg" alt="Cabana del Misterio rodeada de bosque">
                     <figcaption>La Cabana del Misterio en medio del bosque.</figcaption>
                 </figure>
 
                 <figure class="elemento-galeria">
-                    <img src="https://img.razrisyika.ru/kart/13/50813-vse-personazhi-graviti-folz-25.jpg" data-respaldo="imagenes/bill-cipher.svg" alt="Rueda de simbolos y personajes de Gravity Falls">
+                    <img src="imagenes/rueda-misterio-real.jpg" data-respaldo="imagenes/bill-cipher.svg" alt="Rueda de simbolos y personajes de Gravity Falls">
                     <figcaption>Simbolos, personajes y pistas conectadas.</figcaption>
                 </figure>
             </div>
@@ -216,6 +294,6 @@
         <p>Proyecto academico inspirado en Gravity Falls - 2026</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

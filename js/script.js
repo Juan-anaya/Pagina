@@ -4,6 +4,9 @@ const indicadoresCarrusel = document.querySelectorAll(".indicador-carrusel");
 const botonAnterior = document.getElementById("boton-anterior");
 const botonSiguiente = document.getElementById("boton-siguiente");
 const imagenesExternas = document.querySelectorAll("img[data-respaldo]");
+const puntosMapa = document.querySelectorAll(".punto-mapa");
+const nombreLugarMapa = document.getElementById("nombre-lugar-mapa");
+const descripcionLugarMapa = document.getElementById("descripcion-lugar-mapa");
 
 let indiceImagenActual = 0;
 let temporizadorCarrusel;
@@ -62,6 +65,22 @@ imagenesExternas.forEach(function (imagen) {
         }
 
         imagen.src = imagen.dataset.respaldo;
+    });
+});
+
+function mostrarLugarMapa(puntoSeleccionado) {
+    puntosMapa.forEach(function (punto) {
+        punto.classList.remove("activo");
+    });
+
+    puntoSeleccionado.classList.add("activo");
+    nombreLugarMapa.textContent = puntoSeleccionado.dataset.nombre;
+    descripcionLugarMapa.textContent = puntoSeleccionado.dataset.descripcion;
+}
+
+puntosMapa.forEach(function (punto) {
+    punto.addEventListener("click", function () {
+        mostrarLugarMapa(punto);
     });
 });
 
